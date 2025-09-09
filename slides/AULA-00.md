@@ -57,7 +57,7 @@ Utilizaremos o WhatsApp como canal principal de comunicação.
 
 ---
 
-# Avaliações
+## Avaliações
 
 - Teremos duas avaliações ( AV1, AV2 ) de mesmo peso.
 - Teremos uma aula de revisão ( exercícios ) antes de cada avaliação.
@@ -122,44 +122,43 @@ Utilizaremos o WhatsApp como canal principal de comunicação.
   grid-template-rows: 1fr 1fr;
   gap: 20px;
   width: 100%;
-  height: 100%;
+  height: 100%;  
 }
 .grid-item {
-  width: 100%;
-  height: 100%;
-}
-.grid-item iframe {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
 }
 </style>
 
+## Canais de apoio
+<div style="display: flex; align-items: center; justify-content: center;">
 <div class="grid-container">
 
-<div class="grid-item" style="border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); text-align: center;">
+<div class="grid-item">
 <a href="https://www.youtube.com/playlist?list=PLxI8Can9yAHdUtWDKtTA9AmuICNyX9EIr">
-  <image src="images/aula-00-univesp.jpg"></image>
+  <image src="images/aula-00-univesp.png"></image>
 </a>
 </div>
 
-<div class="grid-item" style="border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); text-align: center;">
+<div class="grid-item">
 <a href="https://youtube.com/playlist?list=PLMR4r7Hff-07HoFyyJmP4i5sgsHl8fsce&si=igOOfXQBoOoSOVKh">
   <image src="images/aula-00-ime-ufrj.png"></image>
 </a>
 </div>
 
-<div class="grid-item" style="display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+<div class="grid-item">
 <a href="https://youtube.com/playlist?list=PL221E2BBF13BECF6C&si=jpK-_73UMg_QFd2u">
-  <image src="images/aula-00-mit-ocw.jpg"></image>
+  <image src="images/aula-00-mit-ocw.png"></image>
 </a>
 </div>
 
-<div class="grid-item" style="display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); text-align: center; background-color: #000;">
+<div class="grid-item">
 <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">
-  <image src="images/aula-00-3blue1brown.jpeg"></image>
+  <image src="images/aula-00-3blue1brown.png"></image>
 </a>
 </div>
 
+</div>
 </div>
 
 ---
