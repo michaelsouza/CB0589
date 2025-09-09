@@ -4,26 +4,27 @@ theme: default
 ---
 
 # CB0589 - ÁLGEBRA LINEAR
+
 ## Michael Souza
+
 ### michael@ufc.br
 
 ---
 
 ## O que é Álgebra Linear ?
 
-
 - É a linguagem para entender **estruturas e dados**.
-<br>
+  <br>
 - É o coração dos softwares científicos.
-<br>
+  <br>
 - É a base da **ciência de dados**.
 
 <div style="text-align: center; border: 1px solid #ccc; padding: 16px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
 
-“Os dois problemas fundamentais são 
+“Os dois problemas fundamentais são
 $Ax=b$ e $Ax=\lambda x$”;
 
-*Gilbert Strang - MIT*
+_Gilbert Strang - MIT_
 
 </div>
 
@@ -34,7 +35,7 @@ $Ax=b$ e $Ax=\lambda x$”;
 ## Por que ela é importante ?
 
 <div style="text-align: center;">
-<iframe width="720" height="405" src="https://www.youtube.com/embed/DwJbHrdj3EU?t=128" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<a href="https://youtu.be/DwJbHrdj3EU?t=129"><img src="images/aula-00-bridge.png" width="720" height="405"></a>
 </div>
 
 ---
@@ -43,6 +44,7 @@ $Ax=b$ e $Ax=\lambda x$”;
 <div style="flex: 1;">
 
 ## Canais de comunicação
+
 Utilizaremos o WhatsApp como canal principal de comunicação.
 
 </div>
@@ -64,10 +66,10 @@ Utilizaremos o WhatsApp como canal principal de comunicação.
 
 <div style="width: fit-content; margin: 0 auto;">
 
-| Avaliação | Conteúdos |
-| :---: | :---: |
-| AV1 | matrizes, sistemas lineares, vetores e bases |
-| AV2 | autovalores, autovetores e diagonalização de matrizes |
+| Avaliação |                       Conteúdos                       |
+| :-------: | :---------------------------------------------------: |
+|    AV1    |     matrizes, sistemas lineares, vetores e bases      |
+|    AV2    | autovalores, autovetores e diagonalização de matrizes |
 
 </div>
 
@@ -76,41 +78,43 @@ Utilizaremos o WhatsApp como canal principal de comunicação.
 ## Ementa
 
 - **Álgebra de matrizes e invertibilidade**
-  - Operações, propriedades, identidade/inversa, transposta, matrizes especiais (diagonal, triangular, simétrica, ortogonal).
-  - Habilidade-alvo: ***“saber operar com matrizes”.***
 
+  - Operações, propriedades, identidade/inversa, transposta, matrizes especiais (diagonal, triangular, simétrica, ortogonal).
+  - Habilidade-alvo: **_“saber operar com matrizes”._**
 
 - **Sistemas lineares e Eliminação de Gauss (com pivoteamento)**
   - Escalonamento, formas escalonadas (REF/RREF), leitura do espaço de soluções.
-  - Habilidade-alvo: ***“resolver sistemas lineares”.***
+  - Habilidade-alvo: **_“resolver sistemas lineares”._**
 
 ---
 
 - **Subespaços, base e dimensão; independência linear; posto e nulidade**
-  - Espaços de colunas/linhas/núcleo, teorema posto–nulidade.
-  - Habilidade-alvo: ***“saber construir bases”.***
 
+  - Espaços de colunas/linhas/núcleo, teorema posto–nulidade.
+  - Habilidade-alvo: **_“saber construir bases”._**
 
 - **Produto interno, ortogonalidade e projeções**
+
   - Norma, ângulo, projeção ortogonal; Teorema da Projeção.
   - Habilidade-alvo: fundamentos para construção de bases ortonormais.
 
 - **Gram–Schmidt e bases ortonormais ( QR )**
   - Construção efetiva de bases ortonormais; aplicação: QR.
-  - Habilidade-alvo: ***“saber construir bases ortonormais”***.
+  - Habilidade-alvo: **_“saber construir bases ortonormais”_**.
 
 ---
 
 - **Autovalores e autovetores; diagonalização (critérios)**
-  - Polinômio característico, multiplicidades algébrica/geométrica, quando uma matriz é diagonalizável.
-  - Habilidade-alvo: ***“saber calcular autovalores e autovetores”***.
 
+  - Polinômio característico, multiplicidades algébrica/geométrica, quando uma matriz é diagonalizável.
+  - Habilidade-alvo: **_“saber calcular autovalores e autovetores”_**.
 
 - **Matrizes simétricas e Teorema Espectral**
   - Autovalores reais, autovetores ortogonais, diagonalização ortogonal.
-  - Habilidade-alvo: ***“saber diagonalizar matrizes simétricas”***.
+  - Habilidade-alvo: **_“saber diagonalizar matrizes simétricas”_**.
 
 ---
+
 <style>
 .grid-container {
   display: grid;
@@ -131,18 +135,31 @@ Utilizaremos o WhatsApp como canal principal de comunicação.
 </style>
 
 <div class="grid-container">
-  <div class="grid-item">
-    <iframe src="https://www.youtube.com/embed/videoseries?si=79kGJF4oyEBwpxdk&amp;list=PLxI8Can9yAHdUtWDKtTA9AmuICNyX9EIr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-  <div class="grid-item">
-    <iframe src="https://www.youtube.com/embed/videoseries?v=Yc5PcB8dLHQ&list=PLMR4r7Hff-07HoFyyJmP4i5sgsHl8fsce" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-  <div class="grid-item">
-    <iframe src="https://www.youtube.com/embed/videoseries?si=XJatiL4q5a_ppsu0&amp;list=PLE7DDD91010BC51F8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-  <div class="grid-item">
-    <iframe src="https://www.youtube.com/embed/videoseries?si=RRirliIu-UvGyP4q&amp;list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+
+<div class="grid-item" style="border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); text-align: center;">
+<a href="https://www.youtube.com/playlist?list=PLxI8Can9yAHdUtWDKtTA9AmuICNyX9EIr">
+  <image src="images/aula-00-univesp.jpg"></image>
+</a>
+</div>
+
+<div class="grid-item" style="border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); text-align: center;">
+<a href="https://youtube.com/playlist?list=PLMR4r7Hff-07HoFyyJmP4i5sgsHl8fsce&si=igOOfXQBoOoSOVKh">
+  <image src="images/aula-00-ime-ufrj.png"></image>
+</a>
+</div>
+
+<div class="grid-item" style="display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+<a href="https://youtube.com/playlist?list=PL221E2BBF13BECF6C&si=jpK-_73UMg_QFd2u">
+  <image src="images/aula-00-mit-ocw.jpg"></image>
+</a>
+</div>
+
+<div class="grid-item" style="display: flex; align-items: center; justify-content: center; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); text-align: center; background-color: #000;">
+<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">
+  <image src="images/aula-00-3blue1brown.jpeg"></image>
+</a>
+</div>
+
 </div>
 
 ---
