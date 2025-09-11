@@ -285,15 +285,15 @@ onde $a_k$ é a $k$-ésima **coluna** de $A$.
 
 ### Exemplo:  
 $$
-A=\begin{bmatrix}1&0\$$2pt]2&1\$$2pt]0&1\end{bmatrix},\
-B=\begin{bmatrix}2&-1\$$2pt]3&4\end{bmatrix}
+A=\begin{bmatrix}1&0\\2&1\\0&1\end{bmatrix},\
+B=\begin{bmatrix}2&-1\\3&4\end{bmatrix}
 \Rightarrow
 a_1=\begin{bmatrix}1\\2\\0\end{bmatrix},\ a_2=\begin{bmatrix}0\\1\\1\end{bmatrix}
 $$
 
 $$
 AB=\big[\,2a_1+3a_2\ \ \ -a_1+4a_2\,\big]
-=\begin{bmatrix}2&-1\$$2pt]7&2\$$2pt]3&4\end{bmatrix}.
+=\begin{bmatrix}2&-1\\7&2\\3&4\end{bmatrix}.
 $$
 
 ---
