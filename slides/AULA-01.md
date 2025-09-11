@@ -35,6 +35,70 @@ O elemento $a_{ij}$ está na linha $i$ e na coluna $j$.
 
 ---
 
+Uma **matriz** também pode ser formalmente definida como uma **função** que associa cada par ordenado de índices a um número (ou elemento) em um conjunto, como os números reais.
+
+Seja $I = \{1, 2, \ldots, m\}$ e $J = \{1, 2, \ldots, n\}$ os conjuntos de índices das linhas e colunas, respectivamente.
+
+Chamamos matriz $A$ de ordem $m \times n$ a função:
+
+$$
+A: I \times J \to \mathbb{R}
+$$
+
+tal que, para cada par $(i,j)$ com $i \in I$ e $j \in J$, temos um elemento $a_{ij} = A(i,j)$.
+
+---
+
+### **Interpretação**
+
+* $i$ indica a **linha** e $j$ indica a **coluna**.
+* O valor $a_{ij}$ é o **elemento da matriz** na posição $(i,j)$.
+* Assim, a matriz nada mais é do que uma **tabela organizada** de valores, mas formalmente descrita como uma função de dois índices.
+
+Por exemplo, para uma matriz $2 \times 3$:
+
+$$
+A = \begin{bmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23}
+\end{bmatrix},
+$$
+
+temos:
+
+* $I = \{1,2\}$,
+* $J = \{1,2,3\}$,
+* e cada entrada $a_{ij}$ é dada por $A(i,j)$.
+
+---
+
+### **Exemplos:**
+
+$$A:\{1,2\}\times\{1,2,3\}\to\mathbb{R}, \;\;\;A(i,j) = i +2j$$
+<br>
+
+$$A = \begin{bmatrix}
+3 & 5 & 7 \\
+4 & 6 & 8
+\end{bmatrix}$$
+
+<hr>
+
+<br>
+
+$$I_n:\{1,\ldots,n\}\times\{1,\ldots,n\}\to\mathbb{R}, \;\;\;A(i,j) = \delta_{ij}$$
+<br>
+
+$$I_3 = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}$$
+
+
+
+---
+
 ## **Definição: Adição e Subtração de Matrizes**
 
 Sejam $A=(a_{ij})$ e $B=(b_{ij})$ duas matrizes de mesma ordem $m \times n$.
@@ -95,46 +159,16 @@ $$
 
 ---
 
-## **Definição: Multiplicação de Matrizes**
-
-Seja $A=(a_{ij})$ uma matriz de ordem $m \times n$ e $B=(b_{ij})$ de ordem $n \times p$.
-
-- O **produto** $AB$ é a matriz $C=(c_{ij})$ de ordem $m \times p$.
-- O elemento $c_{ij}$ é obtido pela soma dos produtos dos elementos da linha $i$ de $A$ pelos elementos da coluna $j$ de $B$:
-  $$c_{ij} = \sum_{k=1}^{n} a_{ik}b_{kj}$$
-
-**Atenção:** O número de colunas da primeira matriz deve ser igual ao número de linhas da segunda.
-
----
-
-### Exemplo: Multiplicação de Matrizes
-
-<br>
-
-$$
-A_{2 \times 2} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B_{2 \times 2} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}
-$$
-$$
-C = AB = \begin{bmatrix} (1\cdot5+2\cdot7) & (1\cdot6+2\cdot8) \\ (3\cdot5+4\cdot7) & (3\cdot6+4\cdot8) \end{bmatrix} = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}
-$$
-
-<br>
-
-**A multiplicação de matrizes NÃO é comutativa!**
-<br>
-$$
-BA = \begin{bmatrix} (5\cdot1+6\cdot3) & (5\cdot2+6\cdot4) \\ (7\cdot1+8\cdot3) & (7\cdot2+8\cdot4) \end{bmatrix} = \begin{bmatrix} 23 & 34 \\ 31 & 46 \end{bmatrix} \neq AB
-$$
-
----
-
 ## **Matriz × Vetor (coluna única)**
 
 Se $A=[\,a_1\ \cdots\ a_n\,]\in\mathbb{R}^{m\times n}$ e $x=\begin{bmatrix}x_1\\ \vdots\\ x_n\end{bmatrix}\in\mathbb{R}^n$, então
 $$
-Ax=\sum_{k=1}^n x_k\,a_k \;\in\; \mathbb{R}^m,
+Ax=\sum_{k=1}^n x_k\,a_k \;\in\; \mathbb{R}^m.
 $$
-isto é, **$Ax$ é combinação linear das colunas** de $A$ com pesos dados pelas entradas de $x$.
+
+<br>
+
+**$Ax$ é combinação linear das colunas** de $A$ com pesos dados pelas entradas de $x$.
 
 ---
 
@@ -161,11 +195,11 @@ $$
 
 <br>
 
-Se $y=\begin{bmatrix}y_1&\cdots&y_m\end{bmatrix}\in\mathbb{R}^{1\times m}$ e $A\in\mathbb{R}^{m\times n}$,
+Se $A = [\,a_1\ \cdots\ a_m\,]\in\mathbb{R}^{m\times n}$ (linhas) e $y=\begin{bmatrix}y_1&\cdots&y_m\end{bmatrix}\in\mathbb{R}^{1\times m}$, então
 <br>
 
 $$
-y A=\sum_{i=1}^m y_i\,(\text{linha } i \text{ de } A) \;\in\; \mathbb{R}^{1\times n},
+y A=\sum_{i=1}^m y_i\,a_i \;\in\; \mathbb{R}^{1\times n},
 $$
 <br>
 
@@ -188,7 +222,48 @@ y A=1\!\begin{bmatrix}1&2\end{bmatrix}-2\!\begin{bmatrix}3&4\end{bmatrix}
 =\begin{bmatrix}-5&-6\end{bmatrix}.
 $$
 
+---
 
+## **Definição: Multiplicação de Matrizes**
+
+Seja $A=(a_{ij})$ uma matriz de ordem $m \times n$ e $B=(b_{ij})$ de ordem $n \times p$.
+
+- O **produto** $AB$ é a matriz $C=(c_{ij})$ de ordem $m \times p$.
+- O elemento $c_{ij}$ é obtido pela soma dos produtos dos elementos da linha $i$ de $A$ pelos elementos da coluna $j$ de $B$:
+  $$c_{ij} = \sum_{k=1}^{n} a_{ik}b_{kj}$$
+
+**Atenção:** O número de colunas da primeira matriz deve ser igual ao número de linhas da segunda.
+
+---
+
+<div style="position: absolute; top: 10%;">
+
+## Calculando AB
+
+</div>
+
+![bg h:80%](images/aula-01-matrix-multiply.png)
+
+---
+
+### Exemplo: Multiplicação de Matrizes
+
+<br>
+
+$$
+A_{2 \times 2} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B_{2 \times 2} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}
+$$
+$$
+C = AB = \begin{bmatrix} (1\cdot5+2\cdot7) & (1\cdot6+2\cdot8) \\ (3\cdot5+4\cdot7) & (3\cdot6+4\cdot8) \end{bmatrix} = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}
+$$
+
+<br>
+
+**A multiplicação de matrizes NÃO é comutativa!**
+<br>
+$$
+BA = \begin{bmatrix} (5\cdot1+6\cdot3) & (5\cdot2+6\cdot4) \\ (7\cdot1+8\cdot3) & (7\cdot2+8\cdot4) \end{bmatrix} = \begin{bmatrix} 23 & 34 \\ 31 & 46 \end{bmatrix} \neq AB
+$$
 
 ---
 
@@ -210,46 +285,16 @@ onde $a_k$ é a $k$-ésima **coluna** de $A$.
 
 ### Exemplo:  
 $$
-A=\begin{bmatrix}1&0\\[2pt]2&1\\[2pt]0&1\end{bmatrix},\
-B=\begin{bmatrix}2&-1\\[2pt]3&4\end{bmatrix}
+A=\begin{bmatrix}1&0\$$2pt]2&1\$$2pt]0&1\end{bmatrix},\
+B=\begin{bmatrix}2&-1\$$2pt]3&4\end{bmatrix}
 \Rightarrow
 a_1=\begin{bmatrix}1\\2\\0\end{bmatrix},\ a_2=\begin{bmatrix}0\\1\\1\end{bmatrix}
 $$
 
 $$
 AB=\big[\,2a_1+3a_2\ \ \ -a_1+4a_2\,\big]
-=\begin{bmatrix}2&-1\\[2pt]7&2\\[2pt]3&4\end{bmatrix}.
+=\begin{bmatrix}2&-1\$$2pt]7&2\$$2pt]3&4\end{bmatrix}.
 $$
-
----
-
-## **Interpretação do Produto: Combinação de Linhas**
-
-Se $A=\begin{bmatrix}a_{1*}\\ \vdots\\ a_{m*}\end{bmatrix}$ (com $a_{i*}$ a **linha** $i$ de $A$) e $B$ tem linhas $B_{k*}$,
-$$
-(AB)_{i*}=a_{i*}B=\sum_{k=1}^{n} a_{ik}\, B_{k*}.
-$$
-
----
-
-### Exemplo ( mesmos $A,B$ ):  
-Linhas de $B$:
-$
-B_{1*}=\begin{bmatrix}2&-1\end{bmatrix},\
-B_{2*}=\begin{bmatrix}3&4\end{bmatrix}.
-$
-
-$
-\begin{aligned}
-(AB)_{1*}&= [1\ \ 0]\ B=1\cdot B_{1*}+0\cdot B_{2*}=\begin{bmatrix}2&-1\end{bmatrix},\\
-(AB)_{2*}&= [2\ \ 1]\ B=2\,B_{1*}+1\,B_{2*}=\begin{bmatrix}7&2\end{bmatrix},\\
-(AB)_{3*}&= [0\ \ 1]\ B=0\cdot B_{1*}+1\cdot B_{2*}=\begin{bmatrix}3&4\end{bmatrix}.
-\end{aligned}
-$
-Logo,
-$
-AB=\begin{bmatrix}2&-1\\[2pt]7&2\\[2pt]3&4\end{bmatrix}.
-$
 
 ---
 
@@ -279,20 +324,21 @@ $$
 
 ---
 
-## **Definição: Matriz Identidade e Inversa**
+## **Definição: Matriz Identidade**
 
 **Matriz Identidade ($I_n$):**
 É a matriz quadrada de ordem $n$ que é o elemento neutro da multiplicação:
 <br>
 $$AI_n = I_n A = A$$
 <br>
+
 $$ (I_n)_{ij} = \delta_{ij} = \begin{cases} 1 & \text{se } i=j \\ 0 & \text{se } i \neq j \end{cases} $$
 
 ---
 
 ## **Definição: Matriz Inversa ($A^{-1}$)**
 
-Uma matriz quadrada $A$ de ordem $n$ é **invertível** (ou não singular) se existe uma única matriz $A^{-1}$ de ordem $n$ tal que:
+Uma matriz quadrada $A$ de ordem $n$ é **invertível** (ou não singular) se existe matriz $A^{-1}$ de ordem $n$ tal que:
 <br>
 $$A A^{-1} = A^{-1} A = I_n$$
 <br>
@@ -319,6 +365,7 @@ Para matrizes $A$ e $B$ invertíveis de mesma ordem $n$, e um escalar $k \neq 0$
 4.  **Inversa da Inversa:** A inversa da inversa de uma matriz é a própria matriz:
     $$(A^{-1})^{-1} = A$$ 
     <br>
+
 5.  **Inversa de um Múltiplo Escalar:** A matriz $kA$ é invertível, e sua inversa é:
     $$(kA)^{-1} = \frac{1}{k}A^{-1}$$
 
@@ -340,45 +387,36 @@ $$
 ## **Definição: Matrizes Especiais**
 
 Uma matriz quadrada $A = (a_{ij})$ é dita:
-- **Diagonal:** se $a_{ij} = 0$ para todo $i \neq j$.
-- **Triangular Superior:** se $a_{ij} = 0$ para todo $i > j$.
-- **Triangular Inferior:** se $a_{ij} = 0$ para todo $i < j$.
-- **Simétrica:** se $A = A^T$, ou seja, $a_{ij} = a_{ji}$ para todos $i, j$.
-- **Ortogonal:** se sua inversa é sua transposta, $A^{-1} = A^T$.
+
+<div style="display: flex; justify-content: center;">
+
+|Classe|Definição|
+|:---:|:---:|
+|Diagonal|se $a_{ij} = 0$ para todo $i \neq j$|
+|Triangular Superior|se $a_{ij} = 0$ para todo $i > j$|
+|Triangular Inferior|se $a_{ij} = 0$ para todo $i < j$|
+|Simétrica|se $A = A^T$, ou seja, $a_{ij} = a_{ji}$ para todos $i, j$|
+|Ortogonal|se sua inversa é sua transposta, $A^{-1} = A^T$|
+
+</div>
 
 ---
 
 ### Exemplos de Matrizes Especiais
 
-$$
-\begin{array}{r \;\; c}
-\textbf{Diagonal:} &
-\begin{bmatrix}
-2 & 0 & 0 \\
-0 & -1 & 0 \\
-0 & 0 & 5
-\end{bmatrix} \\[1.2em]
+<div style="display: flex; justify-content: center;">
 
-\textbf{Triangular Superior:} &
-\begin{bmatrix}
-1 & 3 & 9 \\
-0 & 4 & -2 \\
-0 & 0 & 8
-\end{bmatrix} \\[1.2em]
+| **Diagonal** | **Triangular Superior** |
+|:--------------:|:--------------------------:|
+| $\begin{bmatrix} 2 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 5 \end{bmatrix}$ | $\begin{bmatrix} 1 & 3 & 9 \\ 0 & 4 & -2 \\ 0 & 0 & 8 \end{bmatrix}$ |
+| **Simétrica** | **Ortogonal** |
+| $\begin{bmatrix} 1 & 7 & 3 \\ 7 & 4 & -5 \\ 3 & -5 & 6 \end{bmatrix}$ | $\begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}$ |
 
-\textbf{Simétrica:} &
-\begin{bmatrix}
-1 & 7 & 3 \\
-7 & 4 & -5 \\
-3 & -5 & 6
-\end{bmatrix}
-\end{array}
-$$
-
+</div>
 
 ---
 
-### Exercícios Práticos
+### Exercícios
 
 **Dadas as matrizes:**
 $$
@@ -393,20 +431,114 @@ $$
 5. $C^T$
 6. $(A + B)^T$ e $A^T + B^T$
 
+---
+
+# Aplicações de Matrizes
 
 ---
-## **Respostas dos Exercícios**
 
-1.  $A + B = \begin{bmatrix} 0 & 4 \\ 3 & 5 \end{bmatrix}$ 
-<br>
-2.  $3A - 2B = \begin{bmatrix} 5 & -8 \\ 4 & 5 \end{bmatrix}$
-<br>
-3.  $AB = \begin{bmatrix} -1 & 4 \\ 1 & 14 \end{bmatrix}$, $BA = \begin{bmatrix} 7 & 12 \\ 5 & 6 \end{bmatrix}$
+### Exemplo: Grafo ponderado
+$G=(V,E,w)$
 
---- 
+$V=\{1,2,3,4\}$
 
-4.  $AC = \begin{bmatrix} 3 & -1 & 0 \\ 12 & 13 & -12 \end{bmatrix}$
+$E=\{e_1, e_2, e_3, e_4, e_5\}$
+
+$w=\{w_1, w_2, w_3, w_4, w_5\}$
+
+Arestas e pesos:
+- $e_1 = \{1,1\},\; w_1=5$
+- $e_2 = \{1,2\},\; w_2=3$
+- $e_3 = \{1,3\},\; w_3=2$
+- $e_4 = \{2,3\},\; w_4=1$
+- $e_5 = \{2,4\},\; w_5=4$
+
+![bg right:50% h:80%](images/aula-01-graph.png)
+
+---
+
+### Representação Matricial
+
 <br>
-5.  $C^T = \begin{bmatrix} 3 & 2 \\ -1 & 5 \\ 0 & -4 \end{bmatrix}$
-<br>
-6.  $(A + B)^T = \begin{bmatrix} 0 & 3 \\ 4 & 5 \end{bmatrix}$, $A^T + B^T = \begin{bmatrix} 0 & 3 \\ 4 & 5 \end{bmatrix}$
+
+$$
+B=
+\begin{bmatrix}
+5 & 3 & 2 & 0\\
+3 & 0 & 1 & 4\\
+2 & 1 & 0 & 0\\
+0 & 4 & 0 & 0
+\end{bmatrix}
+$$
+
+![bg right:50% h:80%](images/aula-01-graph.png)
+
+
+---
+
+### Exemplo: Da EDO para um Sistema Linear
+
+**Equação Diferencial:**
+$$
+\frac{dy}{dx} = -y + x, \quad y(0) = 1
+$$
+
+- Intervalo: $[0,1]$
+- Dividido em 4 pontos: $x_0 = 0, \, x_1 = 0.25, \, x_2 = 0.50, \, x_3 = 0.75, \, x_4 = 1.00$
+- Passo $h = 0.25$
+
+Queremos aproximar $y(x)$ nesses pontos.
+
+---
+
+### Euler Implícito (Backward Euler)
+
+Aproximação da derivada:
+$$
+\frac{y_{i+1}-y_i}{h} = -y_{i+1} + x_{i+1}
+$$
+
+Reorganizando:
+$$
+(1 + h)y_{i+1} - y_i = h x_{i+1}
+$$
+
+Essa equação é **linear** em $y_{i+1}$ e pode ser montada em um sistema.
+
+---
+
+### Sistema Linear Resultante
+
+$$
+\begin{bmatrix}
+1+h & -1 & 0 & 0 \\
+-1 & 1+h & -1 & 0 \\
+0 & -1 & 1+h & -1 \\
+0 & 0 & -1 & 1+h
+\end{bmatrix}
+\begin{bmatrix}
+y_1 \\ y_2 \\ y_3 \\ y_4
+\end{bmatrix}
+=
+h
+\begin{bmatrix}
+x_1 \\ x_2 \\ x_3 \\ x_4
+\end{bmatrix}
++
+\begin{bmatrix}
+y_0 \\ 0 \\ 0 \\ 0
+\end{bmatrix}
+$$
+
+Com $y_0 = 1$ e $h = 0.25$.
+
+---
+
+<div style="position: absolute; top: 70%; left: 20%;">
+
+$$y(x) = x - 1 + 2e^{-x}$$
+
+</div>
+
+
+![bg h:80%](images/aula-01-edo.png)
